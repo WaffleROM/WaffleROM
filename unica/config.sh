@@ -16,16 +16,16 @@
 #
 
 # UN1CA configuration file
-ROM_VERSION="1.0.0-nxt"
+ROM_VERSION="branch"
 ROM_VERSION+="-$(git rev-parse --short HEAD)"
-ROM_CODENAME="Nexus"
+ROM_CODENAME="Eureka2"
 
 # Source ROM firmware
 case "$TARGET_SINGLE_SYSTEM_IMAGE" in
-    "essi")
-        # Galaxy S25 Ultra (One UI 7)
-        SOURCE_CODENAME="pa3q"
-        SOURCE_FIRMWARE="SM-S938B/EUX/356597450035295"
+    "qssi")
+        # Galaxy S25 (One UI 7)
+        SOURCE_CODENAME="pa1q"
+        SOURCE_FIRMWARE="SM-S931B/EUX/351120223814691"
         SOURCE_EXTRA_FIRMWARES=()
         SOURCE_API_LEVEL=35
         SOURCE_PRODUCT_FIRST_API_LEVEL=35
@@ -35,7 +35,7 @@ case "$TARGET_SINGLE_SYSTEM_IMAGE" in
         # SEC Product Feature
         SOURCE_AUTO_BRIGHTNESS_TYPE="5"
         SOURCE_DVFS_CONFIG_NAME="dvfs_policy_default"
-        SOURCE_NFC_CHIP_VENDOR="NXP"
+        SOURCE_NFC_CHIP_VENDOR="SEC"
         SOURCE_FP_SENSOR_CONFIG="google_touch_display_ultrasonic,wireless_charging_notifier"
         SOURCE_HAS_MASS_CAMERA_APP=false
         SOURCE_HAS_QHD_DISPLAY=true

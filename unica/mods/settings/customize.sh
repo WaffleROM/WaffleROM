@@ -8,5 +8,5 @@ system/priv-app/SecSettings/SecSettings.apk/smali_classes4/com/samsung/android/s
 system/priv-app/SecSettings/SecSettings.apk/smali_classes4/com/samsung/android/settings/deviceinfo/batteryinfo/SecBatteryInfoFragment.smali
 "
 for f in $FTP; do
-    sed -i "s/SM-A236B/SM-S938B/g" "$APKTOOL_DIR/$f"
+    sed -i "s/SM-A236B/SM-S931B/g" "$APKTOOL_DIR/$f"
 done

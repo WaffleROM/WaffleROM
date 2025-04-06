@@ -1,0 +1,4 @@
+id=vendor
+name=Vendor patches
+author=salvogiangri, Simon1511
+description=Adds support for all the bootloader revisions, fix RIL.
