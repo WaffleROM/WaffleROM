@@ -25,18 +25,16 @@ COPY_SOURCE_FIRMWARE()
     local REGION
     MODEL=$(echo -n "$SOURCE_FIRMWARE" | cut -d "/" -f 1)
     REGION=$(echo -n "$SOURCE_FIRMWARE" | cut -d "/" -f 2)
-    COMMON_FOLDERS="odm product system"
-    for folder in $COMMON_FOLDERS; do
-        [[ ! -d "$FW_DIR/${MODEL}_${REGION}/$folder" ]] && continue
-        rsync -a --mkpath \
-            "$FW_DIR/${MODEL}_${REGION}/$folder/" \
-            "$WORK_DIR/$folder/"
 
-        mkdir -p "$WORK_DIR/configs"
-        rsync -a \
-            "$FW_DIR/${MODEL}_${REGION}/file_context-$folder" \
-            "$FW_DIR/${MODEL}_${REGION}/fs_config-$folder" \
-            "$WORK_DIR/configs/"
+    local COMMON_FOLDERS="odm product system"
+    for folder in $COMMON_FOLDERS
+    do
+        if [ ! -d "$WORK_DIR/$folder" ]; then
+            mkdir -p "$WORK_DIR/$folder"
+            cp -a --preserve=all "$FW_DIR/${MODEL}_${REGION}/$folder" "$WORK_DIR"
+            cp --preserve=all "$FW_DIR/${MODEL}_${REGION}/file_context-$folder" "$WORK_DIR/configs"
+            cp --preserve=all "$FW_DIR/${MODEL}_${REGION}/fs_config-$folder" "$WORK_DIR/configs"
+        fi
     done
 
     if $SOURCE_HAS_SYSTEM_EXT; then
@@ -105,19 +103,17 @@ COPY_TARGET_FIRMWARE()
     local REGION
     MODEL=$(echo -n "$TARGET_FIRMWARE" | cut -d "/" -f 1)
     REGION=$(echo -n "$TARGET_FIRMWARE" | cut -d "/" -f 2)
-    
-    COMMON_FOLDERS="vendor vendor_dlkm odm_dlkm"
-    for folder in $COMMON_FOLDERS; do
-        [[ ! -d "$FW_DIR/${MODEL}_${REGION}/$folder" ]] && continue
-        rsync -a --mkpath \
-            "$FW_DIR/${MODEL}_${REGION}/$folder/" \
-            "$WORK_DIR/$folder/"
 
-        mkdir -p "$WORK_DIR/configs"
-        rsync -a \
-            "$FW_DIR/${MODEL}_${REGION}/file_context-$folder" \
-            "$FW_DIR/${MODEL}_${REGION}/fs_config-$folder" \
-            "$WORK_DIR/configs/"
+    local COMMON_FOLDERS="system_dlkm vendor vendor_dlkm"
+    for folder in $COMMON_FOLDERS
+    do
+        [[ ! -d "$FW_DIR/${MODEL}_${REGION}/$folder" ]] && continue
+        if [ ! -d "$WORK_DIR/$folder" ]; then
+            mkdir -p "$WORK_DIR/$folder"
+            cp -a --preserve=all "$FW_DIR/${MODEL}_${REGION}/$folder" "$WORK_DIR"
+            cp --preserve=all "$FW_DIR/${MODEL}_${REGION}/file_context-$folder" "$WORK_DIR/configs"
+            cp --preserve=all "$FW_DIR/${MODEL}_${REGION}/fs_config-$folder" "$WORK_DIR/configs"
+        fi
     done
 }
 
