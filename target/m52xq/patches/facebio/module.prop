@@ -1,0 +1,4 @@
+id=facebio
+name=Face Biometric HAL
+author=yagzie
+description=Updates biometrics.face HAL in order to make it work.
