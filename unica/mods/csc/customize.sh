@@ -39,6 +39,10 @@ while read -r FILE; do
     SET_CSC_FEATURE_CONFIG "CscFeature_Setting_EnableHwVersionDisplay" "TRUE"
     SET_CSC_FEATURE_CONFIG "CscFeature_Setting_SupportMenuSmartTutor" "FALSE"
     SET_CSC_FEATURE_CONFIG "CscFeature_Common_DisableBixby" --delete
+    SET_CSC_FEATURE_CONFIG "CscFeature_SystemUI_ConfigOverrideDataIcon" "LTE"
+    SET_CSC_FEATURE_CONFIG "CscFeature_RIL_USIMPersonalizationKOR" "TRUE"
+    SET_CSC_FEATURE_CONFIG "CscFeature_LockScreen_ConfigCarrierTextPolicy" "DisplayUsimText,DisplayPlmnAtBottom"
+    SET_CSC_FEATURE_CONFIG "CscFeature_LockScreen_ConfigCarrierSecurityPolicy" "SupportSimPermanentDisable"
 
     # Encode XML
     $TOOLS_DIR/cscdecoder --encode --in-place "$FILE"
