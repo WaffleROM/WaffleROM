@@ -26,7 +26,7 @@ COPY_SOURCE_FIRMWARE()
     MODEL=$(echo -n "$SOURCE_FIRMWARE" | cut -d "/" -f 1)
     REGION=$(echo -n "$SOURCE_FIRMWARE" | cut -d "/" -f 2)
 
-    local COMMON_FOLDERS="odm product system"
+    local COMMON_FOLDERS="odm product system optics prism"
     for folder in $COMMON_FOLDERS
     do
         if [ ! -d "$WORK_DIR/$folder" ]; then
