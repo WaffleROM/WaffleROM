@@ -4,15 +4,6 @@ if ! grep -q "Camera End" "$WORK_DIR/vendor/ueventd.rc"; then
 fi
 
 BLOBS_LIST="
-system/lib/FrcMcWrapper.so
-system/lib/libFrucPSVTLib.so
-system/lib/libSemanticMap_v1.camera.samsung.so
-system/lib/libSlowShutter-core.so
-system/lib/libaifrc.aidl.quram.so
-system/lib/libaifrcInterface.camera.samsung.so
-system/lib/libgpuss_wrapper.so
-system/lib/libmcaimegpu.samsung.so
-system/lib/vendor.samsung.hardware.frcmc-V1-ndk.so
 system/lib64/FrcMcWrapper.so
 system/lib64/libAEBHDR_wrapper.camera.samsung.so
 system/lib64/libAIQSolution_MPI.camera.samsung.so
