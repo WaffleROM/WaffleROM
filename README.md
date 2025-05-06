@@ -1,47 +1,34 @@
 <h1 align="center">
   <img loading="lazy" src="readme-res/banner.png"/>
 </h1>
-<p align="center">
-  <a href="https://github.com/ExtremeXT/ExtremeROM/blob/fifteen/LICENSE"><img loading="lazy" src="https://img.shields.io/github/license/ExtremeXT/ExtremeROM?style=for-the-badge&logo=github"/></a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/commits/fifteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ExtremeXT/ExtremeROM/fifteen?style=for-the-badge"/></a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/stargazers"><img loading="lazy" src="https://img.shields.io/github/stars/ExtremeXT/ExtremeROM?style=for-the-badge"/></a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/graphs/contributors"><img loading="lazy" src="https://img.shields.io/github/contributors/ExtremeXT/ExtremeROM?style=for-the-badge"/></a>
-</p>
-<p align="center">ExtremeROM Nexus is a work-in-progress custom firmware for Samsung Galaxy devices.</p>
+
+<p align="center">ProjectNERV is a work-in-progress custom firmware for Samsung Galaxy devices.</p>
 
 <p align="center">
-  <a href="https://t.me/extremerom">💬 Telegram</a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/wiki">📖 Wiki</a>
+  <a href="https://t.me/groupzie">💬 Telegram</a>
 </p>
 
-# What is ExtremeROM Nexus?
-ExtremeROM Nexus is a work-in-progress custom firmware for Samsung Galaxy devices. It's based on the latest and greatest iteration of Samsung's UX and it also includes additional features and tweaks to ensure the best possible experience out of the box.
+# What is Project NERV?
+Project NERV is a work-in-progress custom firmware for Samsung Galaxy devices. It's based on the latest and greatest iteration of Samsung's UX and it also includes additional features and tweaks to ensure the best possible experience out of the box.
 It is based on the UN1CA build system which allows automatic downloading/extraction of the firmware, applying the required patches and generating a flashable zip/tar package for the specified target device.
-ExtremeROM Nexus supports devices using the the Exynos 9820 and Exynos 990 SoCs
-
-Any form of contribution, suggestions, bug report or feature request for the project will be welcome.
+Project NERV supports devices with SM7325 (Snapdragon 778G) and maybe SM8350 (Snapdragon 888).
 
 # Features
-- Based on the latest stable OneUI 7 Galaxy S25 Ultra firmware
-- All software features from S25 Ultra
+- Based on the latest stable OneUI 7 Galaxy S25 firmware
+- All software features from Galaxy S25
 - Slightly Debloated
 - Partially DeKnoxed
 - Full SELinux Support
 - Full Galaxy AI support
-- Completely upstreamed kernels 4.14 and 4.19 kernels for 9820 respectively 990
 - High end animations
 - Native/live blur support
 - Adaptive color tone support
-- Custom ExtremeROM Ringtones
 - Debloated from useless system services/additional apps
-- [BluetoothLibraryPatcher](https://github.com/3arthur6/BluetoothLibraryPatcher) included
+- [BluetoothLibraryPatcher](https://github.com/3arthur6/BluetoothLibraryPatcher) included (disabled tho)
 - [KnoxPatch](https://github.com/salvogiangri/KnoxPatch) implemented in system frameworks
 - Extra mods (Disable Secure Flag, OutDoor mode, more coming soon)
 - Extra CSC features (Call recording, Network speed in status bar)
 - More that I can't remember right now and will have to be added in the future
-
-# Bugs
-See the <a href="https://github.com/ExtremeXT/ExtremeROM/issues">⚠ Issues</a> tab
 
 # Licensing
 This project is licensed under the terms of the [GNU General Public License v3.0](LICENSE). External dependencies might be distributed under a different license, such as:
@@ -72,23 +59,13 @@ This project is licensed under the terms of the [GNU General Public License v3.0
 # Credits
 A big thanks goes to the following for their invaluable contributions in no particular order (MORE INFO AND PEOPLE: TO BE WRITTEN)
 - **[salvogiangri](https://github.com/salvogiangri)** for the UN1CA build system, OneUI patches, and general help and support while developing
-- **[Ocin4Ever](https://github.com/Ocin4Ever)** for a lot of help especially on smali, advice and emotional support :D
-- **[Igor](https://github.com/BotchedRPR)** for getting me into porting, teaching me the basics, and emotional support down the road
-- **[Halal Beef](https://github.com/halal-beef)** for lk3rd, testing and misc help
-- **Emad** for help with S10-specific fixes
-- **[Duhan](https://github.com/duhansysl)** for help with vendor backports, a lot of fixes and advice
-- **[Anan](https://github.com/ananjaser1211)** for all of his contributions to OneUI porting
-- **[CiprianDinca](https://github.com/CiprianDinca9)** for custom ExtremeROM ringtones
+- **[Ocin4Ever](https://github.com/Ocin4Ever)** for help especially on KnoxPatch
+- **[Frax3r](https://github.com/utkustnr)** for his advices and emotional support.
 - **[PeterKnetch93](https://github.com/PeterKnetch93)** for help with smali and a lot of misc fixes
 - **[tsn](https://github.com/tisenu100)** for some smali fixes and advice
-- **[Nguyen Long](https://github.com/LumiPlayground)** for misc fixes and support
-- **[AlexFurina](https://github.com/AlexFurina)** for S10 specific fixes
-- **[Luphaestus](https://github.com/Luphaestus)** for Note 20 specific fixes
-- **[Yagzie](https://github.com/Yagzie)** for engmode and misc fixes
 - **[Fred](https://github.com/xfwdrev)** for WFD, HDR10+, audiopolicy and more fixes
 - **[Saad](https://github.com/saadelasfur)** for help with build system
-- **[Vince](https://github.com/vinceboberly)** for help with kernel upstream
-- **@april865** (TG) for ExtremeROM Nexus banner
+- **[ExtremeXT](https://github.com/ExtremeXT)** for his helps, especially with porting and emotional support.
 
 Original UN1CA credits:
 - **[ShaDisNX255](https://github.com/ShaDisNX255)** for his help, time and for his [NcX ROM](https://github.com/ShaDisNX255/NcX_Stock) which inspired this project
@@ -99,6 +76,3 @@ Original UN1CA credits:
 - **[iDrinkCoffee](https://github.com/iDrinkCoffee-TG)** and **[RisenID](https://github.com/RisenID)** for documentation revisioning
 - **[LineageOS Team](https://www.lineageos.org/)** for their original [OTA updater implementation](https://github.com/LineageOS/android_packages_apps_Updater)
 - *All the UN1CA project contributors and testers ❤️*
-
-# Stargazers over time
-[![Stargazers over time](https://starchart.cc/ExtremeXT/ExtremeROM.svg)](https://starchart.cc/ExtremeXT/ExtremeROM)
