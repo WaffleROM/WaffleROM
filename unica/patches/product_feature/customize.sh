@@ -70,23 +70,12 @@ if [[ "$SOURCE_AUTO_BRIGHTNESS_TYPE" != "$TARGET_AUTO_BRIGHTNESS_TYPE" ]]; then
     done
 fi
 
-if $SOURCE_HAS_QHD_DISPLAY; then
-    if ! $TARGET_HAS_QHD_DISPLAY; then
-        echo "Applying multi resolution patches"
-        ADD_TO_WORK_DIR "e1sxxx" "system" "."
-        # TODO: Finish SystemUI Resolution patch
-        #APPLY_PATCH "system/framework/framework.jar" "resolution/framework.jar/0001-Disable-dynamic-resolution-control.patch"
-        #APPLY_PATCH "system/priv-app/SecSettings/SecSettings.apk" "resolution/SecSettings.apk/0001-Disable-dynamic-resolution-control.patch"
-    fi
-fi
-
 if [[ "$(GET_FP_SENSOR_TYPE "$SOURCE_FP_SENSOR_CONFIG")" != "$(GET_FP_SENSOR_TYPE "$TARGET_FP_SENSOR_CONFIG")" ]]; then
     echo "Applying fingerprint sensor patches"
 
     DECODE_APK "system/framework/framework.jar"
     DECODE_APK "system/framework/services.jar"
     DECODE_APK "system/priv-app/SecSettings/SecSettings.apk"
-    DECODE_APK "system/priv-app/BiometricSetting/BiometricSetting.apk"
 
     FTP="
     system/framework/framework.jar/smali_classes2/android/hardware/fingerprint/FingerprintManager.smali
@@ -102,9 +91,7 @@ if [[ "$(GET_FP_SENSOR_TYPE "$SOURCE_FP_SENSOR_CONFIG")" != "$(GET_FP_SENSOR_TYP
     done
 
     if [[ "$(GET_FP_SENSOR_TYPE "$TARGET_FP_SENSOR_CONFIG")" == "optical" ]]; then
-        ADD_TO_WORK_DIR "r12sksx" "system" "system/bin/surfaceflinger"
-        ADD_TO_WORK_DIR "r12sksx" "system" "system/lib64/libgui.so"
-        ADD_TO_WORK_DIR "r12sksx" "system" "system/lib64/libui.so"
+        DECODE_APK "system/priv-app/BiometricSetting/BiometricSetting.apk"
         APPLY_PATCH "system/framework/services.jar" "fingerprint/services.jar/0001-Set-FP_FEATURE_SENSOR_IS_ULTRASONIC-to-false.patch"
         APPLY_PATCH "system/priv-app/BiometricSetting/BiometricSetting.apk" "fingerprint/BiometricSetting.apk/0001-Set-FP_FEATURE_SENSOR_IS_ULTRASONIC-to-false.patch"
     elif [[ "$(GET_FP_SENSOR_TYPE "$TARGET_FP_SENSOR_CONFIG")" == "side" ]]; then
