@@ -1,3 +1,2 @@
-# Set custom ringtones
-ro.config.ringtone=ACH_ExtremeROM.ogg
-ro.config.notification_sound=ACH_ExtremeROMNoti.ogg
+ro.config.ringtone=ACH_Galaxy_Bells.ogg
+ro.config.notification_sound=ACH_Brightline.ogg
