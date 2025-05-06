@@ -16,9 +16,9 @@
 #
 
 # UN1CA configuration file
-ROM_VERSION="branch"
+ROM_VERSION="1.0.0"
 ROM_VERSION+="-$(git rev-parse --short HEAD)"
-ROM_CODENAME="Eureka2"
+ROM_CODENAME="Paradigm"
 
 # Source ROM firmware
 case "$TARGET_SINGLE_SYSTEM_IMAGE" in
@@ -36,7 +36,7 @@ case "$TARGET_SINGLE_SYSTEM_IMAGE" in
         SOURCE_AUTO_BRIGHTNESS_TYPE="5"
         SOURCE_DVFS_CONFIG_NAME="dvfs_policy_default"
         SOURCE_NFC_CHIP_VENDOR="SEC"
-        SOURCE_FP_SENSOR_CONFIG="google_touch_display_ultrasonic,wireless_charging_notifier"
+        SOURCE_FP_SENSOR_CONFIG="google_touch_display_ultrasonic"
         SOURCE_HAS_MASS_CAMERA_APP=false
         SOURCE_HAS_QHD_DISPLAY=true
         SOURCE_HFR_MODE="3"
