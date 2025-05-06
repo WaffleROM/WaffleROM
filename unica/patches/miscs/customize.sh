@@ -2,10 +2,7 @@ TARGET_FIRMWARE_PATH="$FW_DIR/$(echo -n "$TARGET_FIRMWARE" | sed 's./._.g' | rev
 
 # Set build ID
 VALUE="$(GET_PROP "$WORK_DIR/system/system/build.prop" "ro.build.display.id")"
-SET_PROP "system" "ro.build.display.id" "UN1CA $ROM_CODENAME $ROM_VERSION - $TARGET_CODENAME ($VALUE)"
-
-# Disable FRP
-SET_PROP "vendor" "ro.frp.pst" ""
+SET_PROP "system" "ro.build.display.id" "Project NERV $ROM_CODENAME $ROM_VERSION - $TARGET_CODENAME ($VALUE)"
 
 # Set Edge Lighting model
 MODEL=$(echo "$TARGET_FIRMWARE" | sed -E 's/^([^/]+)\/.*/\1/')
