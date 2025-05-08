@@ -55,7 +55,6 @@ etc/selinux/vendor_sepolicy_version
 
 # Apps debloat
 PRODUCT_DEBLOAT+="
-app/AssistantShell
 app/Chrome64
 app/Duo
 app/Gmail2
@@ -77,6 +76,7 @@ system/app/KidsHome_Installer
 system/app/SamsungTTSVoice_ar_AE_m00_ICLM
 system/app/SamsungTTSVoice_de_DE_f00
 system/app/SamsungTTSVoice_en_GB_f00
+system/app/SamsungTTSVoice_en_US_l03_ICLM
 system/app/SamsungTTSVoice_es_ES_f00
 system/app/SamsungTTSVoice_es_MX_f00_ICLM
 system/app/SamsungTTSVoice_es_US_f00
@@ -101,6 +101,7 @@ system/etc/permissions/privapp-permissions-com.sec.android.soagent.xml
 system/etc/permissions/privapp-permissions-com.sec.bcservice.xml
 system/etc/permissions/privapp-permissions-com.wssyncmldm.xml
 system/etc/permissions/privapp-permissions-meta.xml
+system/etc/default-permissions/default-permissions-meta.xml
 system/etc/sysconfig/digitalkey.xml
 system/etc/sysconfig/meta-hiddenapi-package-allowlist.xml
 system/etc/sysconfig/preinstalled-packages-com.samsung.android.dkey.xml
@@ -122,7 +123,6 @@ system/priv-app/FBInstaller_NS
 system/priv-app/FBServices
 system/priv-app/FotaAgent
 system/priv-app/OneDrive_Samsung_v3
-system/priv-app/OMCAgent5
 system/priv-app/PaymentFramework
 system/priv-app/SOAgent75
 system/priv-app/SamsungCarKeyFw
