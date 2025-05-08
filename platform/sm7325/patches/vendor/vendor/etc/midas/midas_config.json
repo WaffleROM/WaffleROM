@@ -12,7 +12,7 @@
     "q6q", "q6aq", "b6q", "v6q", "e6q", "SC-54E", "SC-55E", "SCG28", "SCG29",
     "gts10p", "gts10pwifi", "gts10u", "gts10uwifi",
     "a55x", "SC-53E", "SCG27", "a56x",
-    "m53x", "a34x", "a35x", "m54x", "a53x", "a33x", "a73xq", "gts10fe", "gts10fep", "a54x", "m44x",
+    "m53x", "a34x", "a35x", "m54x", "a53x", "a33x", "pa1q", "gts10fe", "gts10fep", "a54x", "m44x",
     "gtact5pro", "gtact5prowifi",
     "p3q", "t2q", "o1q", "t2s", "p3s", "o1s", "r9s",
     "m33x", "SC-53C", "SCG15", "SM-A536D", "m34x",
@@ -29,7 +29,7 @@
     "q2q", "b2q", "v2q"
   ],
   "midasMoire950_devices":[
-	"pa1q", "pa2q", "pa3q",
+	"dummy", "pa2q", "pa3q",
     "e1q", "e2q", "e3q", "SM-K758", "SM-K751", "SC-51E", "SC-52E", "SCG25", "SCG26",
     "q6q", "q6aq", "b6q", "v6q", "e6q", "SC-54E", "SC-55E", "SCG28", "SCG29",
     "e1s", "e2s", "r12s", "SCG30",
@@ -96,7 +96,7 @@
                 "SRIBMidas_aiDEBLUR_V140_FP16_sm8750_snpe224.dlc"
               ],
               "models_list": [
-                "pa1q", "pa2q", "pa3q"
+                "dummy", "pa2q", "pa3q"
               ]
             }
           ],
@@ -295,7 +295,7 @@
                 "SRIBMidas_aiHDR_Local_INT16_V430_sm7325_snpe1502.dlc"
               ],
               "models_list": [
-                "a73xq", "a52sxq", "m52xq", "gts7fewifi", "xcoverpro2", "gtact4pro", "gtact4prowifi"
+                "pa1q", "a52sxq", "m52xq", "gts7fewifi", "xcoverpro2", "gtact4pro", "gtact4prowifi"
               ]
             }
           ],
@@ -451,7 +451,7 @@
                 "SRIBMidas_aiMOIREREMOVE_Comb_V950_FP16_sm8750_snpe224.dlc"
               ],
               "models_list": [
-			          "pa1q", "pa2q", "pa3q"
+			          "dummy", "pa2q", "pa3q"
               ]
             }
           ],
@@ -681,7 +681,7 @@
                 "SRIBMidas_aiCLARITY2.0_2X_V200_FP16_sm8750_snpe224.dlc"
               ],
               "models_list": [
-                "pa1q", "pa2q", "pa3q"
+                "dummy", "pa2q", "pa3q"
               ]
             },
             {
@@ -912,7 +912,7 @@
                 "SRIBMidas_aiUPSCALER_4X_LITE_V100_FP16_sm8750_snpe224.dlc"
               ],
               "models_list": [
-                "pa1q", "pa2q", "pa3q"
+                "dummy", "pa2q", "pa3q"
               ]
             },
             {
@@ -1062,7 +1062,7 @@
                 "SRIBMidas_aiFACESEMANTICS_V200_FP16_sm8750_snpe224.dlc"
               ],
               "models_list": [
-               "pa1q", "pa2q", "pa3q"
+               "dummy", "pa2q", "pa3q"
               ]
             }
         ],
