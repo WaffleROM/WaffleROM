@@ -21,6 +21,8 @@
 /system/lib/libsecuibc\.so u:object_r:system_lib_file:s0
 /system/lib/libstagefright_hdcp\.so u:object_r:system_lib_file:s0
 /system/lib64 u:object_r:system_lib_file:s0
+/system/lib64/libmidas_DNNInterface\.camera\.samsung\.so u:object_r:system_lib_file:s0
+/system/lib64/libmidas_core\.camera\.samsung\.so u:object_r:system_lib_file:s0
 /system/lib64/lib_nativeJni\.dk\.samsung\.so u:object_r:system_lib_file:s0
 /system/lib64/libSlowShutter_jni\.media\.samsung\.so u:object_r:system_lib_file:s0
 /system/lib64/libdk_native_keymaster\.so u:object_r:system_lib_file:s0
