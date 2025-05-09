@@ -241,7 +241,6 @@ system/lib64/lib.engmodejni.samsung.so 0 0 644 capabilities=0x0
 system/lib64/libvkjni.so 0 0 644 capabilities=0x0
 system/lib64/libvkmanager.so 0 0 644 capabilities=0x0
 system/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so 0 0 644 capabilities=0x0
-
 system/saiv 0 0 755 capabilities=0x0
 system/saiv/beauty 0 0 755 capabilities=0x0
 system/saiv/beauty/settings.dat 0 0 644 capabilities=0x0
@@ -318,3 +317,6 @@ system/saiv/textrecognition/stride/mSTR_default.properties 0 0 644 capabilities=
 system/system_ext 0 0 755 capabilities=0x0
 system/system_ext/apex 0 0 755 capabilities=0x0
 system/system_ext/apex/com.android.vndk.v30.apex 0 0 644 capabilities=0x0
+system/priv-app 0 0 755 capabilities=0x0
+system/priv-app/PhotoRemasterService 0 0 755 capabilities=0x0
+system/priv-app/PhotoRemasterService/PhotoRemasterService.apk 0 0 644 capabilities=0x0

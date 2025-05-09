@@ -318,3 +318,6 @@
 /system/system_ext u:object_r:system_file:s0
 /system/system_ext/apex u:object_r:system_file:s0
 /system/system_ext/apex/com\.android\.vndk\.v33\.apex u:object_r:system_file:s0
+/system/priv-app u:object_r:system_lib_file:s0
+/system/priv-app/PhotoRemasterService u:object_r:system_file:s0
+/system/priv-app/PhotoRemasterService/PhotoRemasterService\.apk u:object_r:system_file:s0
