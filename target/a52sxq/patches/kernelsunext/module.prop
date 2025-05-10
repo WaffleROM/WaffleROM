@@ -1,0 +1,4 @@
+id=kernelsunext
+name=KernelSU Next.
+author=salvogiangri
+description=Integrates custom kernel to the build zip.
