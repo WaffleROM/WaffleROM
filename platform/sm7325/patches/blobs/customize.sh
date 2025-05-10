@@ -1,3 +1,12 @@
 echo "Add PhotoRemasterService"
 DELETE_FROM_WORK_DIR "system" "system/priv-app/PhotoRemasterService/oat"
 ADD_TO_WORK_DIR "a73xqxx" "system" "system/priv-app/PhotoRemasterService/PhotoRemasterService.apk"
+
+echo "Remove KeyMint libs"
+DELETE_FROM_WORK_DIR "system" "system/lib/android.hardware.security.keymint-V2-ndk.so"
+DELETE_FROM_WORK_DIR "system" "system/lib/android.hardware.security.secureclock-V1-ndk.so"
+DELETE_FROM_WORK_DIR "system" "system/lib/libdk_native_keymint.so"
+DELETE_FROM_WORK_DIR "system" "system/lib/vendor.samsung.hardware.keymint-V2-ndk.so"
+DELETE_FROM_WORK_DIR "system" "system/lib64/android.hardware.security.keymint-V2-ndk.so"
+DELETE_FROM_WORK_DIR "system" "system/lib64/libdk_native_keymint.so"
+DELETE_FROM_WORK_DIR "system" "system/lib64/vendor.samsung.hardware.keymint-V2-ndk.so"
