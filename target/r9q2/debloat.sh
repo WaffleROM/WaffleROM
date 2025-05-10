@@ -56,15 +56,6 @@ etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/privapp-permissions-com.qualcomm.location.xml
 framework/com.qti.location.sdk.jar
-lib/libqcc.so
-lib/libqcc_file_agent_sys.so
-lib/libqccdme.so
-lib/libqccfileservice.so
-lib/vendor.qti.hardware.qccsyshal@1.0.so
-lib/vendor.qti.hardware.qccsyshal@1.1.so
-lib/vendor.qti.hardware.qccsyshal@1.2.so
-lib/vendor.qti.hardware.qccvndhal@1.0.so
-lib/vendor.qti.qccvndhal_aidl-V1-ndk.so
 lib64/libqcc.so
 lib64/libqcc_file_agent_sys.so
 lib64/libqccdme.so
