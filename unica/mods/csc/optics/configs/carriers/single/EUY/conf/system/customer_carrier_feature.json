@@ -1,0 +1,332 @@
+{
+  "version": "11",
+  "mapped_cid_version": "150032",
+  "customer": [
+    {
+      "carrier_group": "EUY",
+      "feature": {
+        "CarrierFeature_BT_EnableSAP": "TRUE",
+        "CarrierFeature_RIL_ConfigNetworkTypeCapability": "EUR-EUR-GSM-EUR",
+        "CarrierFeature_RIL_DisplayAntennaLimited": "TRUE",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForHdIcon": "GSM_HD"
+      }
+    },
+    {
+      "carrier_group": "MBM",
+      "feature": {
+        "CarrierFeature_BT_EnableSAP": "TRUE",
+        "CarrierFeature_Message_EnableMmsUaUapAutoCreate": "ggsm-tmo-ua",
+        "CarrierFeature_Message_SmsToMmsTextThreshold": "2",
+        "CarrierFeature_RIL_ConfigNetworkTypeCapability": "EUR-EUR-GSM-EUR",
+        "CarrierFeature_RIL_DisplayAntennaLimited": "TRUE",
+        "CarrierFeature_RIL_GcfSor": "TRUE",
+        "CarrierFeature_RIL_NotAllowedNetworkMode": "3G/2G,3G,2G",
+        "CarrierFeature_RIL_ReferEonsWithoutLac": "TRUE",
+        "CarrierFeature_RIL_SupportImsClirOverriding": "TRUE",
+        "CarrierFeature_SyncML_DeleteCpAfterTryingToInstall": "TRUE",
+        "CarrierFeature_SyncML_DiscardCpSecurityType4": "Userpin,None",
+        "CarrierFeature_SyncML_DiscardInvalidNetwpinCp": "TRUE",
+        "CarrierFeature_VoiceCall_ConfigNetworkList": "MODE_LTEONLY",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForEmergencyDialCall": "EndPreviousCall",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForHdIcon": "NOHD",
+        "CarrierFeature_VoiceCall_ConfigOpStyleMobileNetworkSettingMenu": "-voltecall",
+        "CarrierFeature_Web_ChromeBookmarkFolderName": "Telekom"
+      }
+    },
+    {
+      "carrier_group": "SEE",
+      "feature": {
+        "CarrierFeature_BT_EnableSAP": "TRUE",
+        "CarrierFeature_RIL_5gIconConfiguration": "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G",
+        "CarrierFeature_RIL_ConfigNetworkTypeCapability": "EUR-EUR-GSM-EUR",
+        "CarrierFeature_RIL_DisplayAntennaLimited": "TRUE",
+        "CarrierFeature_RIL_E911RoutingPolicy": "auto",
+        "CarrierFeature_RIL_GcfSor": "TRUE",
+        "CarrierFeature_RIL_ReferEonsWithoutLac": "TRUE",
+        "CarrierFeature_RIL_SupportImsClirOverriding": "TRUE",
+        "CarrierFeature_RIL_SupportVolte": "TRUE",
+        "CarrierFeature_Setting_CustNetworkSelMenu4": "NUMERIC",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForHdIcon": "NOHD",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForMobileNetSetting": "voltesettingscommon,voltesettingEUR",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "carrier_group": "SEK",
+      "feature": {
+        "CarrierFeature_BT_EnableSAP": "TRUE",
+        "CarrierFeature_RIL_ConfigNetworkTypeCapability": "EUR-EUR-GSM-EUR",
+        "CarrierFeature_RIL_Display4gPlusIconBandwidth": "14",
+        "CarrierFeature_RIL_DisplayAntennaLimited": "TRUE",
+        "CarrierFeature_RIL_GcfSor": "TRUE",
+        "CarrierFeature_RIL_ReferEonsWithoutLac": "TRUE",
+        "CarrierFeature_RIL_SupportImsClirOverriding": "TRUE",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForEmergencyDialCall": "EndPreviousCall",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForHdIcon": "GSM_HD"
+      }
+    }
+  ],
+  "specific": [
+    {
+      "canonical_id": "1328",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "One Internet,internet.one,,,,,,,,276,01,27601,1,IPV4V6,IPV4V6,default+xcap,1,ps,,,,,One.al,1,1,1500,,,|IMS,IMS,,,,,,,,276,01,27601,0,IPV4V6,IPV4V6,ims,1,ps,,,,,One.al,0,1,,,,",
+        "CarrierFeature_RIL_FastDormancyInfo": "One.al,0,0,,,SEE",
+        "CarrierFeature_RIL_VoicemailInfo": "Sekretaria telefonike,777",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "2088",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_Message_DisableMMS": "TRUE",
+        "CarrierFeature_RIL_ApnProfiles": "Internet,tmcg-4g,,,,,38267,38267,,297,02,29702,1,IPV4V6,IPV4,default,1,ps,,,,,Telekom.me,1,,,,,|IMS,IMS,,,,,,,,297,02,29702,,IPV4V6,IPV4V6,ims,,ps,,,,,Telekom.me,0,0,,,,|HOS,HOS,,,,,,,,297,02,29702,,IPV4V6,IPV4V6,xcap,,ps,,,,,Telekom.me,0,0,,,,",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch",
+        "CarrierFeature_VoiceCall_ConfigOpStyleMobileNetworkSettingMenu": "-voltecall"
+      }
+    },
+    {
+      "canonical_id": "30005",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "T-2 Internet,internet.t-2.net,,,,,,,,293,64,29364,1,,,default+dun+supl+hipri+email+rcs,1,ps,,,,,T-2,1,,,,,|T-2 MMS,internet.t-2.net,,,172.20.18.137,8080,,,http://www.mms.t-2.net:8002,293,64,29364,1,,,mms,1,ps,,,,,T-2,1,,,,,|IMS,ims,,,,,,,,293,64,29364,1,IPV4V6,IPV4V6,ims,1,ps,,,,,T-2,,0,,,,|XCAP,hos,,,,,,,,293,64,29364,1,IPV4V6,IPV4V6,xcap,1,ps,,,,,T-2,,0,,,,|T-2 Internet,internet.t-2.net,,,,,,,,214,07,21407,1,,,default+dun+supl+hipri+email+rcs,1,ps,,,,,T-2,1,,,spn,T-2,|T-2 MMS,internet.t-2.net,,,172.20.18.137,8080,,,http://www.mms.t-2.net:8002,214,07,21407,1,,,mms,1,ps,,,,,T-2,1,,,spn,T-2,|IMS,ims,,,,,,,,214,07,21407,1,IPV4V6,IPV4V6,ims,1,ps,,,,,T-2,,0,,spn,T-2,|XCAP,hos,,,,,,,,214,07,21407,1,IPV4V6,IPV4V6,xcap,1,ps,,,,,T-2,,0,,spn,T-2,",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30038",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Internet,internet,,,,,,,,297,01,29701,,,,default+xcap,1,ps,,,,,One,1,,,,,|MMS,mms,,,192.168.246.5,8080,,,http://mm.vor.mms29701.me,297,01,29701,,,,mms,1,ps,,,,,One,1,,,,,|IMS,IMS,,,,,,,,297,01,29701,,IPV4V6,IPV4V6,ims,,,,,,,One,1,0,1300,,,",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30107",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Internet,internet.ht.hr,,,,,,,,219,01,21901,1,IPV4V6,IPV4,default,1,ps,,,,,HT HR,1,1,1500,,,|Telekom IMS,IMS,,,,,,,,219,01,21901,0,IPV4V6,IPV4V6,ims,1,ps,,,,,HT HR,0,0,1500,,,|HOS,hos,,,010.012.000.004,8080,,,http://mms.t-mobile.hr/servlets/mms,219,01,21901,1,IPV4V6,IPV4,mms+xcap,1,ps,,,,,HT HR,0,0,1280,,,|Internet,internet.ht.hr,,,,,,,,219,20,21920,1,IPV4V6,IPV4,default,1,ps,,,,,HT HR,1,1,1500,,,|Telekom IMS,IMS,,,,,,,,219,20,21920,0,IPV4V6,IPV4V6,ims,1,ps,,,,,HT HR,0,0,1500,,,|HOS,hos,,,010.012.000.004,8080,,,http://mms.t-mobile.hr/servlets/mms,219,20,21920,1,IPV4V6,IPV4,mms+xcap,1,ps,,,,,HT HR,0,0,1280,,,",
+        "CarrierFeature_RIL_NotAllowedNetworkMode": "3G/2G,3G,2G",
+        "CarrierFeature_RIL_VoicemailInfo": "Govorna po?ta,+38598151100",
+        "CarrierFeature_VoiceCall_ConfigNetworkList": "MODE_LTEONLY",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch",
+        "CarrierFeature_VoiceCall_ConfigOpStyleMobileNetworkSettingMenu": "-voltecall"
+      }
+    },
+    {
+      "canonical_id": "30151",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Telemach internet,internet,,,,,,,,293,70,29370,1,,,default+dun+supl+hipri+email+rcs,1,ps,,,,,Telemach,1,,,,,|Telemach MMS,internet,,,,,,,http://mms.telemach.net,293,70,29370,1,,,mms,1,ps,,,,,Telemach,1,,,,,|Telemach XCAP,xcap,,,,,,,,293,70,29370,,,,xcap,1,,,,,,Telemach,0,0,,,,|Telemach IMS,ims,,,,,,,,293,70,29370,,IPV4V6,,ims,1,,,,,,Telemach,0,0,1300,,,",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30231",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Mtel internet,mtelinternet,,,,,internet,068,,297,03,29703,1,,,default,1,ps,,,,,m:tel MNE,1,,,,,|Mtel MMS,mtelmms,,,172.25.25.23,,mms,068,http://mm.mmsmtel.com/,297,03,29703,1,,,mms,1,ps,,,,,m:tel MNE,1,,,,,|IMS,ims,,,,,,,,297,03,29703,0,IPV4V6,IPV4V6,ims,1,,,,,,m:tel MNE,0,0,1358,,,|HOS,hos,,,,,,,,297,03,29703,,IPV4V6,IPV4V6,xcap,1,,,,,,m:tel MNE,0,0,,,,",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30240",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "mt:s wap,gprswap,,,,,mts,064,,220,03,22003,1,,,default,1,ps,,,,,mt:s,1,1,,,,|mt:s mms,mms,,,172.17.85.131,8080,mts,064,http://mms.mts064.telekom.rs/mms/wapenc,220,03,22003,1,,,mms,1,ps,,,,,mt:s,1,1,,,,|IMS,IMS,,,,,,,,220,03,22003,,IPV4V6,,ims,1,,,,,,mt:s,0,0,1358,,,|HOS,HOS,,,,,,,,220,03,22003,,IPV4V6,,xcap,1,,,,,,mt:s,0,0,1500,,,",
+        "CarrierFeature_RIL_VoicemailInfo": ",711",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30298",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "internet,internet,,,,,,,,293,40,29340,1,,,default,1,ps,,,,,A1 SI,1,,,,,|mms,mms,,,80.95.224.46,8080,,,http://mmc,293,40,29340,1,,,mms,1,ps,,,,,A1 SI,1,,,,,|hos,hos,,,,,,,,293,40,29340,,,,xcap,1,,,,,,A1 SI,0,0,1358,,,|ims,ims,,,,,,,,293,40,29340,,,,ims,1,,,,,,A1 SI,0,0,1358,,,",
+        "CarrierFeature_RIL_VoicemailInfo": "Telefonski predal,+38640444000",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30334",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "internet,internet,,,,,,,,294,03,29403,0,IPV4,IPV4,default+email,1,ps,,,,,A1 MK,1,1,,,,|MMS,MMS,,,,8080,,,http://mmsc.a1.mk,294,03,29403,1,IPV4,IPV4,mms,1,ps,,,,,A1 MK,1,1,,,,|VoLTE IMS,IMS,,,,,,,,294,03,29403,,IPV4,IPV4,ims,1,,,,,,A1 MK,0,0,1500,,,|VoLTE HoS,HOS,,,,,,,,294,03,29403,0,IPV4,IPV4,xcap,1,,,,,,A1 MK,0,0,1500,,,",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30432",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Eronet WEB,web.eronet.ba,,8080,,,,,,218,03,21803,0,,,default,1,,,,,,HT Eronet,1,,,,,|Eronet MMS,mms.eronet.ba,,,010.012.003.011,8080,,,http://mms.gprs.eronet.ba/mms/wapenc,218,03,21803,0,,,mms,1,,,,,,HT Eronet,1,,,,,|ERONET START,gprs.eronet.ba,,,,,,,http://www.hteronet.ba,218,03,21803,0,,,default,1,,,,,,HT Eronet,1,,,,,",
+        "CarrierFeature_RIL_VoicemailInfo": "Govorna Po?ta,+387633888",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30449",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "A1 SRB Internet,internet,,,,,internet,internet,,220,05,22005,1,,,default,1,ps,,,,,A1 SRB,1,1,,,,|A1 SRB MMS,mms,,,,,mms,mms,http://mms.a1.rs,220,05,22005,1,,,mms,1,ps,,,,,A1 SRB,1,1,,,,|IMS,ims,,,,,,,,220,05,22005,,IPV4,,ims,1,,,,,,A1 SRB,0,0,1358,,,|hos,hos,,,,,,,,220,05,22005,,IPV4,,xcap,1,,,,,,A1 SRB,0,0,1500,,,",
+        "CarrierFeature_RIL_FastDormancyInfo": "A1 SRB,0,0,,,SEE",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30581",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Yettel INTERNET,internet,,,,,yettel,gprs,,220,01,22001,1,IPV4,IPV4,default,1,ps,,,,,Yettel SRB,1,1,,,,|Yettel MMS,mms,,,217.65.192.33,8080,,,http://mms.yettel.rs/servlets/mms,220,01,22001,1,IPV4,IPV4,mms,1,ps,,,,,Yettel SRB,1,1,,,,|Yettel IMS,ims,,,,,,,,220,01,22001,,,,ims,1,,,,,,Yettel SRB,0,0,1300,,,|Yettel XCAP,xcap,,,,,,,,220,01,22001,,,,xcap,1,,,,,,Yettel SRB,0,0,,,,",
+        "CarrierFeature_RIL_VoicemailInfo": ",909",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30596",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "A1 Internet,internet,,,,,,,,219,10,21910,0,IPV4,IPV4,default,1,ps,,,,,A1 HR,1,1,1500,,,|A1 MMS,mms,,,,,,,http://mms.a1.hr/servlets/mms,219,10,21910,0,IPV4,IPV4,mms,1,ps,,,,,A1 HR,1,1,1500,,,|ims,ims,,,,,,,,219,10,21910,0,IPV4V6,IPV4V6,ims,1,,,,,,A1 HR,0,0,1500,,,|xcap,hos,,,,,,,,219,10,21910,0,,,xcap,1,,,,,,A1 HR,0,0,1500,,,",
+        "CarrierFeature_RIL_NotAllowedNetworkMode": "3G/2G,3G,2G",
+        "CarrierFeature_RIL_VoicemailInfo": "Govorna po?ta,+385917000",
+        "CarrierFeature_VoiceCall_ConfigNetworkList": "MODE_LTEONLY",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch",
+        "CarrierFeature_VoiceCall_ConfigOpStyleMobileNetworkSettingMenu": "-voltecall"
+      }
+    },
+    {
+      "canonical_id": "30632",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Telemach Internet,telemach.hr,,,,,,,,219,02,21902,0,IPV4V6,IPV4,default,1,ps,,,,,TM HR,1,,1358,,,|Telemach MMS,telemach.hr,,,86.32.5.243,80,,,http://mms.telemach.hr,219,02,21902,0,IPV4V6,IPV4,mms,1,ps,,,,,TM HR,1,,1358,,,|IMS,IMS,,,,,,,,219,02,21902,0,IPV4V6,IPV4,ims,1,ps,,,,,TM HR,0,0,1358,,,|HOS,HOS,,,,,,,,219,02,21902,0,IPV4V6,IPV4,xcap,1,ps,,,,,TM HR,0,0,1358,,,",
+        "CarrierFeature_RIL_VoicemailInfo": "Govorna po?ta,+385951000222",
+        "CarrierFeature_Setting_DataRoamingOption": "national",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30655",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "BHMobileInternet,active.bhmobile.ba,,,,,,,,218,90,21890,0,,,default+supl,1,psfirst,,,,,BH Mobile,0,1,,,,|BHMobileMMS,mms.bhmobile.ba,,,195.222.056.041,8080,,,http://mms.bhmobile.ba/servlets/mms,218,90,21890,0,,,mms,1,,,,,,BH Mobile,0,,,,,|BHMobileIMS,ims,,,,,,,,218,90,21890,,,,ims,,,,,,,BH Mobile,,0,,,,|BHMobileXCAP,xcap,,,,,,,,218,90,21890,,,,xcap,,,,,,,BH Mobile,,0,,,,",
+        "CarrierFeature_RIL_VoicemailInfo": "Govorna Po?ta,+38761123123",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30657",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "MBM",
+        "CarrierFeature_RIL_ApnProfiles": "Internet,internet,,,,,internet,t-mobile,,294,01,29401,1,IPV4V6,IPV4,default+supl,1,ps,,,,,Telekom MK,0,1,1500,,,|MMS,mms,,,62.162.155.227,8080,mms,mms,http://mms.t-mobile.com.mk,294,01,29401,1,IPV4V6,IPV4,mms,1,ps,,,,,Telekom MK,0,,1500,,,|HOS,hos,,,,,,,,294,01,29401,0,IPV4V6,IPV4,xcap,1,ps,,,,,Telekom MK,0,0,1500,,,|IMS,IMS,,,,,,,,294,01,29401,0,IPV4V6,IPV4V6,ims,1,,,,,,Telekom MK,0,0,1500,,,",
+        "CarrierFeature_RIL_NotAllowedNetworkMode": "3G/2G,3G,2G",
+        "CarrierFeature_RIL_VoicemailInfo": "¬¤¬à¬Ó¬à¬â¬ß¬Ñ ¬á¬à¬ê¬ä¬Ñ,+38970121212",
+        "CarrierFeature_VoiceCall_ConfigNetworkList": "MODE_LTEONLY",
+        "CarrierFeature_VoiceCall_ConfigOpStyleMobileNetworkSettingMenu": "-voltecall"
+      }
+    },
+    {
+      "canonical_id": "30659",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "mtelgprs,mtelsmart,,,,,,,,218,05,21805,1,,,default,1,ps,,,,,m:tel,1,,,,,|mtelmms,mtelmms,,,192.168.61.11,80,,,http://mmsc.mtel.ba/mms/wapenc,218,05,21805,1,,,mms,1,ps,,,,,m:tel,1,,,,,|IMS,IMS,,,,,,,,218,05,21805,,IPV4,IPV4,ims,1,,,,,,m:tel,0,0,,,,|XCAP,XCAP,,,,,,,,218,05,21805,,IPV4,IPV4,xcap,1,,,,,,m:tel,0,0,,,,",
+        "CarrierFeature_RIL_VoicemailInfo": ",06555400",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30701",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "Mobilni Internet,internet,,,,,mobitel,internet,,293,41,29341,1,,,default+dun+supl+hipri+email+rcs,1,ps,,,,,Mobitel,0,,,,,|Mobitel MMS,internet,,,,,mobitel,internet,http://mms.telekom.si,293,41,29341,1,,,mms,1,ps,,,,,Mobitel,0,,,,,|IMS,IMS,,,,,,,,293,41,29341,,,,ims,,,,,,,Mobitel,0,0,,,,|XCAP,hos,,,,,,,,293,41,29341,1,,,xcap,1,,,,,,Mobitel,0,0,,,,",
+        "CarrierFeature_RIL_VoicemailInfo": "Telefonski predal,+38641101000",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30719",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "T-2 Internet,internet.t-2.net,,,,,,,,293,64,29364,1,,,default+dun+supl+hipri+email+rcs,1,ps,,,,,T-2,1,,,,,|T-2 MMS,internet.t-2.net,,,172.20.18.137,8080,,,http://www.mms.t-2.net:8002,293,64,29364,1,,,mms,1,ps,,,,,T-2,1,,,,,|IMS,ims,,,,,,,,293,64,29364,1,IPV4V6,IPV4V6,ims,1,ps,,,,,T-2,,0,,,,|XCAP,hos,,,,,,,,293,64,29364,1,IPV4V6,IPV4V6,xcap,1,ps,,,,,T-2,,0,,,,|T-2 Internet,internet.t-2.net,,,,,,,,214,07,21407,1,,,default+dun+supl+hipri+email+rcs,1,ps,,,,,T-2,1,,,spn,T-2,|T-2 MMS,internet.t-2.net,,,172.20.18.137,8080,,,http://www.mms.t-2.net:8002,214,07,21407,1,,,mms,1,ps,,,,,T-2,1,,,spn,T-2,|IMS,ims,,,,,,,,214,07,21407,1,IPV4V6,IPV4V6,ims,1,ps,,,,,T-2,,0,,spn,T-2,|XCAP,hos,,,,,,,,214,07,21407,1,IPV4V6,IPV4V6,xcap,1,ps,,,,,T-2,,0,,spn,T-2,",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "30751",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEK",
+        "CarrierFeature_RIL_ApnProfiles": "Moldcell Internet,internet,,,,,,,,259,02,25902,1,,,default+dun+supl+hipri+email+rcs,1,ps,,,,,Moldcell,1,,,,,|ims,ims,,,,,,,,259,02,25902,,IPV4V6,,ims,1,,,,,,Moldcell,0,,,,,|hos,hos,,,,,,,,259,02,25902,,IPV4V6,,xcap,1,,,,,,Moldcell,0,,,,,"
+      }
+    },
+    {
+      "canonical_id": "30759",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEK",
+        "CarrierFeature_RIL_ApnProfiles": "Kyivstar Internet,internet,,,,,,,,255,03,25503,1,IPV4V6,IPV4,default+dun+supl+hipri+cbs+fota+email+rcs,1,ps,,,,,Kyivstar,1,,,,,|Kyivstar IMS,ims,,,,,,,,255,03,25503,,IPV4V6,IPV4V6,ims,1,,,,,,Kyivstar,1,1,,,,"
+      }
+    },
+    {
+      "canonical_id": "30792",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEK",
+        "CarrierFeature_RIL_ApnProfiles": "Orange Internet,wap.orange.md,,,,,,,,259,01,25901,1,,,default+supl+hipri+email,1,ps,,,,,Orange MD,1,,,,,|Orange IMS,ims,,,,,,,,259,01,25901,,IPV4V6,IPV4V6,ims,1,,,,,,Orange MD,1,,,,,|Orange XCAP,xcap,,,,,,,,259,01,25901,,IPV4V6,IPV4V6,xcap,1,,,,,,Orange MD,1,,,,,"
+      }
+    },
+    {
+      "canonical_id": "30797",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEK",
+        "CarrierFeature_RIL_ApnProfiles": "Vodafone Internet,internet,,,,,,,,255,01,25501,1,,,default+dun+supl+hipri+cbs+fota+xcap+email+rcs,1,ps,,,,,Vodafone,1,,,,,|Vodafone IMS,ims,,,,,,,,255,01,25501,,IPV4V6,,ims,1,,,,,,Vodafone,0,0,,,,"
+      }
+    },
+    {
+      "canonical_id": "30824",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEK",
+        "CarrierFeature_RIL_ApnProfiles": "3Mob MMS,3g.utel.ua,,,10.212.3.148,8080,,,http://10.212.1.4/mms/wapenc,255,07,25507,1,,,mms,1,ps,,,,,3Mob,1,,,,,|3Mob Internet,3g.utel.ua,,,,,,,,255,07,25507,1,,,default+dun+supl+hipri+cbs+fota+email+rcs,1,ps,,,,,3Mob,1,,,,,"
+      }
+    },
+    {
+      "canonical_id": "30826",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEK",
+        "CarrierFeature_RIL_ApnProfiles": "Lifecell Internet,internet,,,,,,,,255,06,25506,1,IPV4V6,IPV4V6,default+dun+supl+hipri+cbs+fota+email+rcs,1,ps,,,,,Lifecell,1,,,,,|Lifecell IMS,ims,,,,,,,,255,06,25506,,IPV6,IPV6,ims,1,,,,,,Lifecell,1,0,1280,,,"
+      }
+    },
+    {
+      "canonical_id": "31026",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "VFAL Internet,vodafoneweb,,,,,web,web,,276,02,27602,1,,,default+dun+supl+hipri+email,1,ps,,,,,Vodafone AL,0,1,,,,|IMS,ims,,,,,,,,276,02,27602,,IPV4,,ims,,,,,,,Vodafone AL,0,,,,,|XCAP,hos,,,,,,,,276,02,27602,,IPV4,,xcap,,,,,,,Vodafone AL,,,,,,",
+        "CarrierFeature_RIL_FastDormancyInfo": "Vodafone AL,0,0,,,SEE",
+        "CarrierFeature_RIL_VoicemailInfo": "Sekretaria telefonike,135",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch",
+        "CarrierFeature_VoiceCall_ConfigOpStyleMobileNetworkSettingMenu": "-voltecall"
+      }
+    },
+    {
+      "canonical_id": "31027",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "internet,internet,,,,,,,,293,40,29340,1,,,default,1,ps,,,,,HoT,1,,,imsi,013,|mms,mms,,,80.95.224.47,8080,,,http://mms.hot.si,293,40,29340,1,,,mms,1,ps,,,,,HoT,1,,,imsi,013,",
+        "CarrierFeature_RIL_VoicemailInfo": "Telefonski predal,+38669699690",
+        "CarrierFeature_VoiceCall_ConfigOpStyleForNetworkSetting": "DisplayRatInfoForManualSearch"
+      }
+    },
+    {
+      "canonical_id": "31199",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "vala,vala,,,,,,,,221,01,22101,1,IPV4V6,IPV4,default,1,ps,,,,,VALA,1,1,1500,spn,Vala,"
+      }
+    },
+    {
+      "canonical_id": "31201",
+      "feature": {
+        "CarrierFeature_Common_CarrierGroup": "SEE",
+        "CarrierFeature_RIL_ApnProfiles": "ipko,ipko,,,,,,,,221,02,22102,1,IPV4V6,IPV4,default,1,ps,,,,,IPKO,1,1,1500,spn,IPKO,"
+      }
+    }
+  ]
+}
