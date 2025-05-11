@@ -34,7 +34,7 @@ system/bin/mafpc_write
 
 # GameDriver
 SYSTEM_DEBLOAT+="
-system/priv-app/GameDriver-SM8550
+system/priv-app/GameDriver-SM8750
 "
 
 # Camera SDK
