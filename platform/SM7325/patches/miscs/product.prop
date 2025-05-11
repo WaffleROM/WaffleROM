@@ -8,5 +8,10 @@ bluetooth.profile.mcp.server.enabled=
 bluetooth.profile.ccp.server.enabled=
 bluetooth.profile.vcp.controller.enabled=
 bluetooth.profile.bap.broadcast.assist.enabled=
-bluetooth.profile.bap.broadcast.source.enabled=
+bluetooth.profile.bas.client.enabled=
+bluetooth.hfp.swb.supported=
+bluetooth.server.automatic_turn_on=
 ro.frp.pst=
+
+# Pagesize match with stock
+ro.product.cpu.pagesize.max=4096
