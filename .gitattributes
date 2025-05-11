@@ -31,3 +31,5 @@ target/*/patches/china/vendor/firmware/** binary
 target/m52xq/patches/vendor/vendor/firmware/** binary
 platform/exynos9820/patches/vendor/vendor/** binary
 platform/sm7325/patches/vendor/vendor/** binary
+unica/mods/csc/prism/** binary
+unica/mods/csc/optics/** binary
