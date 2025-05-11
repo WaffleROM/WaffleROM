@@ -1,0 +1,6 @@
+system 0 0 755 capabilities=0x0
+system/lib64 0 0 755 capabilities=0x0
+system/lib64/libvkjni.so 0 0 644 capabilities=0x0
+system/lib64/libvkmanager.so 0 0 644 capabilities=0x0
+system/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so 0 0 644 capabilities=0x0
+

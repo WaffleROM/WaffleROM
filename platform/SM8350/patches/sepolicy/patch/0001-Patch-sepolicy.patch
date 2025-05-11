@@ -1,0 +1,53 @@
+From 2cb342143304aaed9194acb49bf2ddf079587a02 Mon Sep 17 00:00:00 2001
+From: Saad <saadelasfur@gmail.com>
+Date: Tue, 25 Feb 2025 18:48:21 +0300
+Subject: [PATCH] Patch sepolicy
+
+---
+ system_ext_property_contexts           | 9 +++++++++
+ system_ext_sepolicy.cil                | 1 +
+ system_ext_sepolicy_and_mapping.sha256 | 2 +-
+ 3 files changed, 11 insertions(+), 1 deletion(-)
+
+diff --git a/system_ext_property_contexts b/system_ext_property_contexts
+index 0aec023..c1efea9 100644
+--- a/system_ext_property_contexts
++++ b/system_ext_property_contexts
+@@ -866,6 +866,15 @@ sys.ddp.extdata_range                           u:object_r:exported_system_prop:
+ 
+ # https://jira-mx.sec.samsung.net/browse/SEANDROID-12125
+ persist.cyclops.enabled                         u:object_r:exported_radio_prop:s0
++
++# https://jira-mx.sec.samsung.net/browse/SEANDROID-12154
++ro.af.fcmultiplier                              u:object_r:exported_radio_prop:s0
++
++# https://jira-mx.sec.samsung.net/browse/SEANDROID-12175
++sys.ddp.shrink_errno                            u:object_r:exported_system_prop:s0
++
++# https://jira-mx.sec.samsung.net/browse/SEANDROID-12272
++persist.sys.sec.fuse.perf                       u:object_r:exported_system_prop:s0
+ #line 1 "out/soong/.intermediates/system/sepolicy/contexts/system_ext_property_contexts/android_common/qssi_64/newline"
+ 
+ #line 1 "device/samsung/system_ext/qcom/sepolicy/private/property_contexts"
+diff --git a/system_ext_sepolicy.cil b/system_ext_sepolicy.cil
+index e1f95ad..51c6c98 100644
+--- a/system_ext_sepolicy.cil
++++ b/system_ext_sepolicy.cil
+@@ -2164,6 +2164,7 @@
+ (allow audiomirroring aidl_codecsolution_service (service_manager (find)))
+ (allow audioserver edmnativehelper_service (service_manager (find)))
+ (allow audioserver CustomFrequencyManager_service (service_manager (find)))
++(allow audioserver exported_radio_prop (file (read getattr map open)))
+ (allow init auditd_exec (file (read getattr map execute open)))
+ (allow init auditd (process (transition)))
+ (allow auditd auditd_exec (file (read getattr map execute open entrypoint)))
+diff --git a/system_ext_sepolicy_and_mapping.sha256 b/system_ext_sepolicy_and_mapping.sha256
+index 9ca31fd..01a6f10 100644
+--- a/system_ext_sepolicy_and_mapping.sha256
++++ b/system_ext_sepolicy_and_mapping.sha256
+@@ -1 +1 @@
+-018729abdb06fe7db113b65a4e2f696044b4261c670432bafd86a216201bb005
++36bd7d74be8fd27567626f6107712f89de904aebebecbd8a4431519badaa11be
+-- 
+2.48.1
+
