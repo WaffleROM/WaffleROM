@@ -51,6 +51,7 @@ system/priv-app/VideoScan
 SYSTEM_EXT_DEBLOAT+="
 app/QCC
 bin/qccsyshal@1.2-service
+bin/qccsyshal_aidl-service
 etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
