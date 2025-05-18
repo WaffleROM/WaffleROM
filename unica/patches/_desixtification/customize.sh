@@ -9,7 +9,7 @@ if [[ $TARGET_SINGLE_SYSTEM_IMAGE == "qssi" || $TARGET_SINGLE_SYSTEM_IMAGE == "e
     find "$SRC_DIR/prebuilts/samsung/a73xqxx/system/lib/" -type f | while IFS= read -r blob; do
         blob_path="system/lib/$(basename "$blob")"
         if ! printf '%s\n' "${BLOBS_LIST[@]}" | grep -Fxq -- "$blob_path"; then
-            ADD_TO_WORK_DIR "system" "$blob_path"
+            [[ ! -z $blob_path ]] && ADD_TO_WORK_DIR "a73xqxx" "system" "$blob_path"
         fi
     done
 
