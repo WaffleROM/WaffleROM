@@ -15,6 +15,7 @@ system/bin/linker_asan64 0 2000 755 capabilities=0x0
 system/bin/linker_hwasan64 0 2000 755 capabilities=0x0
 system/bin/remotedisplay 0 2000 755 capabilities=0x0
 system/etc/public.libraries-camera.samsung.txt 0 0 644 capabilities=0x0
+system/etc/vintf/compatibility_matrix.device.xml 0 0 644 capabilities=0x0
 system/etc/vintf/manifest.xml 0 0 644 capabilities=0x0
 system/lib64/libdk_native_keymaster.so 0 0 644 capabilities=0x0
 system/lib64/lib.engmodejni.samsung.so 0 0 644 capabilities=0x0
