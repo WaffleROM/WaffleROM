@@ -57,18 +57,15 @@ ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libsamsung_videoengine_9_0.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libtensorflowLite.camera.samsung.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libtensorflowlite_inference_api.camera.samsung.so"
 
-echo "Fixing HEIF and NFC by @eversonsouzz"
+echo "Fixing HEIF by @eversonsouzz"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libhdrsolutionhelper.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libheif.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libheifcapture.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libheifcapture_jni.media.samsung.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libheifcodec_jni.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libheifregiondec_jni.so"
-ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libnfc_nxpsn_jni.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libsheifdecadapter.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/libultrahdr.so"
-ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/vendor.samsung.hardware.nfc@2.0.so"
-ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/vendor.samsung.hardware.nfc_aidl-V1-ndk.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib/vintf-hdrsolution-V3-cpp.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libhdrsolutionhelper.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libheif.so"
@@ -77,11 +74,8 @@ ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libheifcapture_jni.media.samsu
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libheifcodec_jni.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libheifregiondec_jni.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/liblow_light_hdr.arcsoft.so"
-ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libnfc_nxpsn_jni.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libsheifdecadapter.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/libultrahdr.so"
-ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/vendor.samsung.hardware.nfc@2.0.so"
-ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/vendor.samsung.hardware.nfc_aidl-V1-ndk.so"
 ADD_TO_WORK_DIR "a73xqxx" "system" "/system/lib64/vintf-hdrsolution-V3-cpp.so"
 
 echo "Fixing Google Assistant"
@@ -91,7 +85,8 @@ ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "product" "priv-app/HotwordEnrollmentOKGoogle
 ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "product" "priv-app/HotwordEnrollmentXGoogleEx3HEXAGON"
 
 echo "Add stock rscmgr.rc"
-ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/init/rscmgr.rc"
+[[ $TARGET_CODENAME != "m52xq" ]] && ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/init/rscmgr.rc"
+[[ $TARGET_CODENAME == "m52xq" ]] && ADD_TO_WORK_DIR "a73xq" "system" "system/etc/init/rscmgr.rc"
 
 DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.cover.clearcameraviewcover.xml"
 DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.cover.flip.xml"
@@ -103,6 +98,10 @@ DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.sensorhub_
 DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.wirelesscharger_authentication.xml"
 echo "Add stock system features"
 ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/permissions/com.sec.feature.sensorhub_level40.xml"
+[[ $TARGET_CODENAME != "a73xq" ]] && \
+    ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/permissions/com.sec.feature.cover.minisviewwalletcover.xml" 0 0 644 "u:object_r:system_file:s0"
+[[ $TARGET_CODENAME == "m52xq" ]] && \
+    ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/permissions/com.sec.feature.nsflp_level_600.xml" 0 0 644 "u:object_r:system_file:s0"
 
 if [ $TARGET_CODENAME != "a73xq" ]; then
     ADD_TO_WORK_DIR "a73xqxx" "vendor" "vendor/bin/hw/wpa_supplicant"
