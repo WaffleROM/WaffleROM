@@ -1,34 +1,29 @@
 if [[ $TARGET_SINGLE_SYSTEM_IMAGE == "qssi" || $TARGET_SINGLE_SYSTEM_IMAGE == "essi" ]]; then
     echo "Target device with 32-Bit HALs detected! Patching..."
 
-    ADD_TO_WORK_DIR "a73xqxx" "system" "system/lib" 0 0 644 "u:object_r:system_lib_file:s0"
-
-    BLOBS_LIST="
-    system/apex/com.android.i18n.apex
-    system/apex/com.android.runtime.apex
-    system/apex/com.google.android.tzdata6.apex
-    system/bin/linker
-    system/bin/linker_asan
-    system/bin/bootstrap/linker
-    system/bin/bootstrap/linker_asan
-    "
-    for blob in $BLOBS_LIST
-    do
-        ADD_TO_WORK_DIR "a73xqxx" "system" "$blob" 0 0 644 "u:object_r:system_file:s0"
+    BLOBS_LIST=(
+        "system/lib/libnfc_nxpsn_jni.so"
+        "system/lib/vendor.samsung.hardware.nfc@2.0.so"
+        "system/lib/vendor.samsung.hardware.nfc_aidl-V1-ndk.so"
+    )
+    find "$SRC_DIR/prebuilts/samsung/a73xqxx/system/lib/" -type f | while IFS= read -r blob; do
+        blob_path="system/lib/$(basename "$blob")"
+        if ! printf '%s\n' "${BLOBS_LIST[@]}" | grep -Fxq -- "$blob_path"; then
+            ADD_TO_WORK_DIR "system" "$blob_path"
+        fi
     done
 
-    BLOBS_LIST="
-    system/bin/linker
-    system/bin/bootstrap/linker
-    "
-    for blob in $BLOBS_LIST
-    do
-        ADD_TO_WORK_DIR "a73xqxx" "system" "$blob" 0 0 644 "u:object_r:system_linker_exec:s0"
-    done
+    ADD_TO_WORK_DIR "a73xqxx" "system" "system/apex/com.android.i18n.apex"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "system/apex/com.android.runtime.apex"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "system/apex/com.google.android.tzdata6.apex"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "system/bin/bootstrap/linker"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "system/bin/bootstrap/linker_asan"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "system/bin/linker"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "system/bin/linker_asan"
 
     # Downgrade ENGMODE for 32bit HAL version
-    ADD_TO_WORK_DIR "a73xqxx" "system" "lib64/lib.engmode.samsung.so" 0 0 644 "u:object_r:system_lib_file:s0"
-    ADD_TO_WORK_DIR "a73xqxx" "system" "lib64/lib.engmodejni.samsung.so" 0 0 644 "u:object_r:system_lib_file:s0"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "lib64/lib.engmode.samsung.so"
+    ADD_TO_WORK_DIR "a73xqxx" "system" "lib64/lib.engmodejni.samsung.so"
 
     # Set props
     echo "Setting props..."
