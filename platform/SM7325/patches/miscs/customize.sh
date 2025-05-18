@@ -13,13 +13,8 @@ sed -i \
     "/use_content_detection/a ro.surface_flinger.set_idle_timer_ms=3000\nro.surface_flinger.set_touch_timer_ms=500\nro.surface_flinger.set_display_power_timer_ms=1000" \
     "$WORK_DIR/vendor/default.prop"
 
-echo "Disabling A/B"
-SET_PROP "product" "ro.product.ab_ota_partitions" --delete
+LINE="$(sed -n '/\/dev\/cpuset\/background\/cpus/=' "$WORK_DIR/vendor/bin/init.kernel.post_boot-yupik.sh")"
+sed -i \
+    "$LINE cecho 0-1 > /dev/cpuset/background/cpus\necho 0-3 > /dev/cpuset/restricted/cpus" \
+    "$WORK_DIR/vendor/bin/init.kernel.post_boot-yupik.sh"
 
-echo "Fix Brightness"
-ADD_TO_WORK_DIR "a73xqxx" "vendor" "bin/hw/vendor.samsung.hardware.light-service"
-ADD_TO_WORK_DIR "a73xqxx" "vendor" "lib64/android.hardware.light-V1-ndk_platform.so"
-ADD_TO_WORK_DIR "a73xqxx" "vendor" "lib64/vendor.samsung.hardware.light-V1-ndk_platform.so"
-
-echo "Replace btservices APEX"
-ADD_TO_WORK_DIR "a73xqxx" "system" "system/apex/com.android.btservices.apex"

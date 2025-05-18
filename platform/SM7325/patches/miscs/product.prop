@@ -15,3 +15,6 @@ ro.frp.pst=
 
 # Pagesize match with stock
 ro.product.cpu.pagesize.max=4096
+
+# Remove A/B
+ro.product.ab_ota_partitions=

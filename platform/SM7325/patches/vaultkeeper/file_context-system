@@ -1,5 +1,0 @@
-/system u:object_r:system_file:s0
-/system/lib64/libvkjni\.so u:object_r:system_lib_file:s0
-/system/lib64/libvkmanager\.so u:object_r:system_lib_file:s0
-/system/lib64 u:object_r:system_lib_file:s0
-/system/lib64/vendor\.samsung\.hardware\.security\.vaultkeeper@2\.0\.so u:object_r:system_lib_file:s0

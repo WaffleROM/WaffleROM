@@ -1,4 +1,4 @@
-echo "Add PhotoRemasterService"
+echo "Replacing PhotoRemasterService"
 DELETE_FROM_WORK_DIR "system" "system/priv-app/PhotoRemasterService/oat"
 ADD_TO_WORK_DIR "a73xqxx" "system" "system/priv-app/PhotoRemasterService/PhotoRemasterService.apk"
 
@@ -10,3 +10,72 @@ DELETE_FROM_WORK_DIR "system" "system/lib/vendor.samsung.hardware.keymint-V2-ndk
 DELETE_FROM_WORK_DIR "system" "system/lib64/android.hardware.security.keymint-V2-ndk.so"
 DELETE_FROM_WORK_DIR "system" "system/lib64/libdk_native_keymint.so"
 DELETE_FROM_WORK_DIR "system" "system/lib64/vendor.samsung.hardware.keymint-V2-ndk.so"
+
+echo "Removing AIDL Vaultkeeper library"
+DELETE_FROM_WORK_DIR "system" "system/lib64/vendor.samsung.hardware.security.vaultkeeper-V1-ndk.so"
+
+echo "Adding vaultkeeper & keymaster from A73XQ"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libvkjni.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libvkmanager.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/android.hardware.keymaster@3.0.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/android.hardware.keymaster@4.0.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/android.hardware.keymaster@4.1.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/libkeymaster4_1support.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/libkeymaster4support.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/libdk_native_keymaster.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libdk_native_keymaster.so"
+
+echo "Fixing brightness via A73XQ blobs"
+ADD_TO_WORK_DIR "a73xqxx" "vendor" "bin/hw/vendor.samsung.hardware.light-service"
+ADD_TO_WORK_DIR "a73xqxx" "vendor" "lib64/android.hardware.light-V1-ndk_platform.so"
+ADD_TO_WORK_DIR "a73xqxx" "vendor" "lib64/vendor.samsung.hardware.light-V1-ndk_platform.so"
+
+echo "Fixing btservices via A73XQ APEX"
+ADD_TO_WORK_DIR "a73xqxx" "system" "system/apex/com.android.btservices.apex"
+
+echo "Add resized S25 Wallpapers by @TSN"
+DELETE_FROM_WORK_DIR "system" "system/priv-app/wallpaper-res/wallpaper-res.apk"
+ADD_TO_WORK_DIR "pa3qxx" "system" "system/priv-app/wallpaper-res/wallpaper-res.apk"
+
+echo "Fixing artifacting and WiFi"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/bin/insthk"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/bin/remotedisplay"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/libhwui.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libhwui.so"
+
+echo "Fixing MIDAS, AI and camera"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/public.libraries-camera.samsung.txt"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/vintf/manifest.xml"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/vintf/compatibility_matrix.device.xml"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib/libSlowShutter_jni.media.samsung.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libSlowShutter_jni.media.samsung.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/lib_nativeJni.dk.samsung.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libmidas_DNNInterface.camera.samsung.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libmidas_core.camera.samsung.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libsamsung_videoengine_9_0.so"
+
+echo "Fixing Google Assistant"
+DELETE_FROM_WORK_DIR "product" "priv-app/HotwordEnrollmentOKGoogleEx4HEXAGON"
+DELETE_FROM_WORK_DIR "product" "priv-app/HotwordEnrollmentXGoogleEx4HEXAGON"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "product" "priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "product" "priv-app/HotwordEnrollmentXGoogleEx3HEXAGON"
+
+echo "Add stock rscmgr.rc"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/init/rscmgr.rc"
+
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.cover.clearcameraviewcover.xml"
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.cover.flip.xml"
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.cover.sview.xml"
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.cover.xml"
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.nfc_authentication_cover.xml"
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.pocketsensitivitymode_level1.xml"
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.sensorhub_level29.xml"
+DELETE_FROM_WORK_DIR "system" "system/etc/permissions/com.sec.feature.wirelesscharger_authentication.xml"
+echo "Add stock system features"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/permissions/com.sec.feature.sensorhub_level40.xml"
+
+if [[ $TARGET_CODENAME == "r9q2" ]]; then
+    ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "vendor" "vendor/bin/hw/wpa_supplicant"
+    ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "vendor" "vendor/etc/midas"
+fi
