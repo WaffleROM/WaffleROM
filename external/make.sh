@@ -145,6 +145,7 @@ SAMFIRM=true
 SIGNAPK=true
 SMALI=true
 OMCDECODER=true
+DTC=true
 
 ANDROID_TOOLS_EXEC=(
     "adb" "append2simg" "avbtool" "e2fsdroid"
@@ -183,6 +184,10 @@ OMCDECODER_EXEC=(
     "cscdecoder"
 )
 CHECK_TOOLS "${OMCDECODER_EXEC[@]}" && OMCDECODER=false
+DTC_EXEC=(
+    "dtc"
+)
+CHECK_TOOLS "${DTC_EXEC[@]}" && DTC=false
 
 if $ANDROID_TOOLS; then
     ANDROID_TOOLS_CMDS=(
@@ -268,6 +273,15 @@ if $OMCDECODER; then
     )
 
     BUILD "omcdecoder" "$SRC_DIR/external/omcdecoder" "${OMCDECODER_CMDS[@]}"
+fi
+
+if $DTC; then
+    DTC_CMDS=(
+        "make CC=\"gcc -march=x86-64 -mtune=generic\""
+        "cp -a \"dtc\" \"$TOOLS_DIR\""
+    )
+
+    BUILD "dtc" "$SRC_DIR/external/dtc" "${DTC_CMDS[@]}"
 fi
 
 exit 0
