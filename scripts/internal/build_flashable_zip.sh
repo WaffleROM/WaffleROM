@@ -54,9 +54,9 @@ PRINT_HEADER()
     echo    'ui_print(" ");'
     echo    'ui_print("****************************************");'
     echo -n 'ui_print("'
-    echo -n "Project NERV $ROM_CODENAME $ROM_VERSION for $TARGET_NAME"
+    echo -n "WaffleROM $ROM_CODENAME $ROM_VERSION for $TARGET_NAME"
     echo    '");'
-    echo    'ui_print("ROM by Yagzie @Telegram");'
+    echo    'ui_print("ROM by Ksawlii,Waffle @Telegram");'
     echo    'ui_print("Build system coded by salvo_giangri @XDAforums");'
     echo    'ui_print("****************************************");'
     echo -n 'ui_print("'
