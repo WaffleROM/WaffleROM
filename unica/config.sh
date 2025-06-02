@@ -16,16 +16,16 @@
 #
 
 # UN1CA configuration file
-ROM_VERSION="1.0.1"
+ROM_VERSION="1.0.0"
 ROM_VERSION+="-$(git rev-parse --short HEAD)"
-ROM_CODENAME="Paradigm"
+ROM_CODENAME="Liege"
 
 # Source ROM firmware
 case "$TARGET_SINGLE_SYSTEM_IMAGE" in
     "qssi")
-        # Galaxy S25 (One UI 7)
-        SOURCE_CODENAME="pa1q"
-        SOURCE_FIRMWARE="SM-S931B/EUX/351120223814691"
+        # Galaxy S23 (One UI 7)
+        SOURCE_CODENAME="dm1q"
+        SOURCE_FIRMWARE="SM-S911B/EUX/352404915650889"
         SOURCE_EXTRA_FIRMWARES=()
         SOURCE_API_LEVEL=35
         SOURCE_PRODUCT_FIRST_API_LEVEL=35
