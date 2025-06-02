@@ -24,6 +24,7 @@
 SYSTEM_DEBLOAT+="
 system/app/WifiRROverlayAppQC
 system/app/WifiRROverlayAppWifiLock
+system/preload
 "
 PRODUCT_DEBLOAT+="
 overlay/SoftapOverlay6GHz
