@@ -1,0 +1,34 @@
+From 1e36498ef0238172e527e374cf09d02005ea4007 Mon Sep 17 00:00:00 2001
+From: Ksawlii <ksawery.blaszczak@proton.me>
+Date: Tue, 3 Jun 2025 21:22:08 +0200
+Subject: [PATCH] Enable StrongBox in DevRootKeyATCmd
+
+---
+ smali_classes5/com/android/server/DevRootKeyATCmd.smali | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/smali_classes5/com/android/server/DevRootKeyATCmd.smali b/smali_classes5/com/android/server/DevRootKeyATCmd.smali
+index fd991ae1..2b5da432 100644
+--- a/smali_classes5/com/android/server/DevRootKeyATCmd.smali
++++ b/smali_classes5/com/android/server/DevRootKeyATCmd.smali
+@@ -4050,7 +4050,7 @@
+ 
+     if-ne v2, v9, :cond_5
+ 
+-    const/4 v10, 0x0
++    const/4 v10, 0x1
+ 
+     invoke-virtual {v15, v10}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setIsStrongBoxBacked(Z)Landroid/security/keystore/KeyGenParameterSpec$Builder;
+ 
+@@ -4357,7 +4357,7 @@
+ 
+     if-ne v2, v4, :cond_d
+ 
+-    const/4 v4, 0x0
++    const/4 v4, 0x1
+ 
+     invoke-virtual {v6, v4}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setIsStrongBoxBacked(Z)Landroid/security/keystore/KeyGenParameterSpec$Builder;
+ 
+-- 
+2.49.0
+

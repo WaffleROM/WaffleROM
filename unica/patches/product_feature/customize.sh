@@ -212,5 +212,9 @@ fi
 
 if [ ! -f "$FW_DIR/${MODEL}_${REGION}/vendor/etc/permissions/android.hardware.strongbox_keystore.xml" ]; then
     echo "Applying strongbox patches"
-    APPLY_PATCH "system/framework/framework.jar" "strongbox/framework.jar/0001-Disable-StrongBox-in-DevRootKeyATCmd.patch"
+    if [ "$TARGET_SINGLE_SYSTEM_IMAGE" = "qssi" ]; then
+        APPLY_PATCH "system/framework/framework.jar" "strongbox/qssi/framework.jar/0001-Disable-StrongBox-in-DevRootKeyATCmd.patch"
+    elif [ "$TARGET_SINGLE_SYSTEM_IMAGE" = "essi" ]; then
+        APPLY_PATCH "system/framework/framework.jar" "strongbox/essi/framework.jar/0001-Enable-StrongBox-in-DevRootKeyATCmd.patch"
+    fi
 fi
