@@ -159,38 +159,45 @@ if ! grep "vendor/tee_eur 0 2000 755 capabilities=0x0" "$WORK_DIR/configs/fs_con
 fi
 
 # A536E
+TEE_BLOBS="
+00000000-0000-0000-0000-000000010081
+00000000-0000-0000-0000-000000020081
+00000000-0000-0000-0000-000000534b4d
+00000000-0000-0000-0000-000048444350
+00000000-0000-0000-0000-0000534b504d
+00000000-0000-0000-0000-0050524f4341
+00000000-0000-0000-0000-0053545354ab
+00000000-0000-0000-0000-00575644524d
+00000000-0000-0000-0000-42494f535542
+00000000-0000-0000-0000-46494e474502
+00000000-0000-0000-0000-4662436b6d52
+00000000-0000-0000-0000-474154454b45
+00000000-0000-0000-0000-4b45594d5354
+00000000-0000-0000-0000-4d5053545549
+00000000-0000-0000-0000-4d704e434954
+00000000-0000-0000-0000-4d70536b566e
+00000000-0000-0000-0000-4d7073534d43
+00000000-0000-0000-0000-4d7073617574
+00000000-0000-0000-0000-505256544545
+00000000-0000-0000-0000-5345435f4652
+00000000-0000-0000-0000-54412d48444d
+00000000-0000-0000-0000-544545535355
+00000000-0000-0000-0000-54496473706c
+00000000-0000-0000-0000-544974684c6c
+00000000-0000-0000-0000-564c544b5052
+00000000-0000-0000-0000-656e676d6f64
+00000000-0000-0000-0000-657365636f6d
+00000000-0000-0000-0000-6b6e78677564
+00000000-0000-0000-0000-6d706f667376
+00000000-0000-0000-0000-6d73745f5441
+"
+
 if ! grep -q "vendor/tee_cis" "$WORK_DIR/configs/file_context-vendor"; then
     {
         echo "/vendor/tee_cis u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-000000010081 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-000000020081 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-000000534b4d u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-000048444350 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-0000534b504d u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-0050524f4341 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-0053545354ab u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-00575644524d u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-42494f535542 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-46494e474502 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-4662436b6d52 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-474154454b45 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-4b45594d5354 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-4d5053545549 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-4d704e434954 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-4d70536b566e u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-4d7073617574 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-505256544545 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-5345435f4652 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-54412d48444d u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-54496473706c u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-544545535355 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-544974684c6c u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-564c544b5052 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-656e676d6f64 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-657365636f6d u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-6b6e78677564 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-6d706f667376 u:object_r:tee_file:s0"
-        echo "/vendor/tee_cis/00000000-0000-0000-0000-6d73745f5441 u:object_r:tee_file:s0"
+        for b in "$TEE_BLOBS"; do
+            echo "/vendor/tee_cis/$b u:object_r:tee_file:s0"
+        done
         echo "/vendor/tee_cis/driver u:object_r:tee_file:s0"
         echo "/vendor/tee_cis/driver/00000000-0000-0000-0000-494363447256 u:object_r:tee_file:s0"
         echo "/vendor/tee_cis/driver/00000000-0000-0000-0000-4d53546d7374 u:object_r:tee_file:s0"
@@ -206,35 +213,9 @@ fi
 if ! grep -q "vendor/tee_cis" "$WORK_DIR/configs/fs_config-vendor"; then
     {
         echo "vendor/tee_cis 0 2000 755 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-000000010081 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-000000020081 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-000000534b4d 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-000048444350 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-0000534b504d 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-0050524f4341 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-0053545354ab 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-00575644524d 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-42494f535542 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-46494e474502 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-4662436b6d52 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-474154454b45 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-4b45594d5354 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-4d5053545549 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-4d704e434954 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-4d70536b566e 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-4d7073617574 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-505256544545 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-5345435f4652 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-54412d48444d 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-54496473706c 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-544545535355 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-544974684c6c 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-564c544b5052 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-656e676d6f64 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-657365636f6d 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-6b6e78677564 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-6d706f667376 0 0 644 capabilities=0x0"
-        echo "vendor/tee_cis/00000000-0000-0000-0000-6d73745f5441 0 0 644 capabilities=0x0"
+        for b in "$TEE_BLOBS"; do
+            echo "vendor/tee_cis/$b 0 0 644 capabilities=0x0"
+        done
         echo "vendor/tee_cis/driver 0 2000 755 capabilities=0x0"
         echo "vendor/tee_cis/driver/00000000-0000-0000-0000-494363447256 0 0 644 capabilities=0x0"
         echo "vendor/tee_cis/driver/00000000-0000-0000-0000-4d53546d7374 0 0 644 capabilities=0x0"
